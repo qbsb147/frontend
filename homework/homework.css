@@ -40,7 +40,6 @@ input[type="button"]{
 }
 
 .margin{
-    display: flex;
     max-width: 1300px;
     margin:0 auto;
 }
@@ -51,7 +50,7 @@ input[type="button"]{
     width: 100%;
     height: auto;
 }
-
+/* over---------------------------------------------------------------- */
 #over{
     align-items: center;
     height: 30px;
@@ -73,7 +72,7 @@ input[type="button"]{
 #over .margin p{
     font-size: 12px;
 }
-
+/* top---------------------------------------------------------------- */
 #top{
     background-color: #62d491;
     height: 40px;
@@ -90,19 +89,25 @@ input[type="button"]{
     align-items: center;
     padding: 0 20px;
 }
-#top .margin .right div:last-child{
-    background-color: #ffffff;
-    border-radius: 50px 50px 50px 50px;
-    padding: 0;
-}
 
 #top .margin .right div:first-child{
     font-size: 13px;
     font-weight: bold;
 }
 
+#top .margin .right div:last-child{
+    background-color: #ffffff;
+    border-radius: 50px 50px 50px 50px;
+    padding: 0;
+    width: 90px;
+    height: 23px;
+    margin : 0;
+}
+
 #top .margin .right div:last-child a{
-    font-size: 16px;
+    font-size: 14px;
+    margin:0;
+    padding:10px;
 }
 
 #top .margin .left {
@@ -119,4 +124,17 @@ input[type="button"]{
     width: 100%;
     background: white;
     text-align: center;
+}
+/* member-menu---------------------------------------------------------------- */
+#member-menu ul{
+    display: flex;
+    gap : 10px;
+    justify-content : flex-end;
+    height: 30px;
+    align-items: center;
+}
+
+#member-menu ul li{
+    font-size: 13px;
+    color: #2c2c2c;
 }
