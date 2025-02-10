@@ -1,0 +1,122 @@
+*{
+    font: 16px 'Pretendard', sans-serif;
+    padding: 0;
+    margin:0;
+}
+input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    left: 0;
+    top: 0;
+}
+
+input[type="radio"] + label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    color: #000;
+    text-decoration: none;
+}
+ul, ol, li{
+    list-style: none;
+}
+
+input[type="button"]{
+    outline: none;
+    border : none;
+}
+
+.gb-1{
+    border : 1px solid black;
+}
+
+.margin{
+    display: flex;
+    max-width: 1300px;
+    margin:0 auto;
+}
+
+/* nav---------------------------------------------------------------- */
+#nav{
+    position: fixed;
+    width: 100%;
+    height: auto;
+}
+
+#over{
+    align-items: center;
+    height: 30px;
+    background-color: #edf1f5;
+    color: rgb(95, 95, 95);
+}
+
+#over .margin{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+}
+
+#over .margin img{
+    padding: 0 10px;
+}
+
+#over .margin p{
+    font-size: 12px;
+}
+
+#top{
+    background-color: #62d491;
+    height: 40px;
+}
+
+#top .margin{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+#top .margin *{
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+#top .margin .right div:last-child{
+    background-color: #ffffff;
+    border-radius: 50px 50px 50px 50px;
+    padding: 0;
+}
+
+#top .margin .right div:first-child{
+    font-size: 13px;
+    font-weight: bold;
+}
+
+#top .margin .right div:last-child a{
+    font-size: 16px;
+}
+
+#top .margin .left {
+    display: flex;
+    border-left : 1px solid #5dc488;
+    border-right : 1px solid #5dc488;
+    height: 100%;
+    width: 200px;
+    padding: 0;
+}
+
+#top .margin .left input[type="radio"]:checked + label{
+    height: 100%;
+    width: 100%;
+    background: white;
+    text-align: center;
+}

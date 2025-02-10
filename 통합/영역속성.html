@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영역속성</title>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+        }
+
+        div{
+            box-sizing: border-box;
+            border: 1px solid black;
+        }
+
+        .wrap{
+            width: 100%;
+            max-width: 1000px;
+            height: 800px;
+            margin: 0 auto;
+        }
+
+        .wrap>div{
+            width:auto;
+            margin: 10px;
+        }
+
+        #header{
+            height: 10%;
+        }
+        #naviagor{height: 10%;}
+        #content{
+            height: 60%;
+            width: 70%;
+        }
+        #aside{
+            height: 60%;
+            width: 30%;
+        }
+        #footer{height:20%;}
+
+        #content{
+            display: flex;
+            width: 70%;
+            flex-direction: column;
+        }
+
+        #content>div{
+            margin : 10px
+        }
+        #aside{
+            width: 30%;
+            margin-left: auto;
+        }
+        
+        #main{
+            display: flex;
+        }
+/* --------------------------------------------------------------- */
+        #header{
+            height:10%;
+            position: relative;
+        }
+
+        #header_1{
+            display: flex;
+            height: 100%;
+            width: 100px;
+            background: url("./실습문제 이미지/logo.png") center;
+            background-size: 100%;
+            justify-content: flex-start;
+            background-repeat: no-repeat;
+        }
+
+        #header_2{
+            display: flex;
+            justify-content: center;
+            width: calc(100%-100px);
+            height: 100%;
+        }
+
+        #header>form{
+            height: 30px;
+            margin : auto;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+        #search+input[type=submit]{
+            width: 100px;
+            background : url("./실습문제 이미지/search.png");
+            background-repeat: no-repeat;
+            background-size: 25%;
+            background-position: center;
+        }
+
+/* --------------------------------------------------------------- */
+        ul,li,ol{
+            list-style: none;
+            padding: 0;
+            margin:0;
+        }
+        a{
+            text-decoration: none;
+            color:black;
+        }
+        #navigator{
+            display: flex;
+            height: 50px;
+            align-items: center;
+
+        }
+        #navigator>ul{
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+        }
+        #navigator>ul>li>a{
+            color: #6e6e6e;
+            font-size: 20px;
+            font-weight: 600;
+            text-align: center;
+        }
+        #navigator>ul>li a:hover{
+            color: #2c2c2c;
+        }
+/* --------------------------------------------------------------- */
+        #content_1 img{
+            height: auto;
+            max-width: 100%;
+        }
+        #content_3 img{
+            height: auto;
+            max-width: 100%;
+        }
+        #content_2{
+            display: flex;
+            font-size: large;
+            color: #3d3d3d;
+            font-weight: 525;
+        }
+        #notice{
+            width: calc(100% - 150px)
+        }
+        #news{
+            display: flex;
+            justify-content: flex-end;
+            width:150px;
+        }
+        #news div{
+            width:100%;
+            text-align: center;
+        }
+/* --------------------------------------------------------------- */
+
+    #aside img{
+        height: auto;
+        width: 100%;
+    }
+/* --------------------------------------------------------------- */
+    #login-form>*{
+        width:100%;
+    }
+    #login-form-input{
+        height:80%;
+    }
+    #login-form-input>*{
+        height: 100%;
+        float: left
+    }
+
+</style>
+</head>
+<body>
+    <div class="wrap">
+        
+        <div id="header">
+            <div id="header_1">
+            </div>
+            <form id="header_2" action="">
+                <input type="text" id="search" placeholder="검색어를 입력하세요">
+                <input type="submit" id="search-btn" value="">
+            </form>
+        </div>
+        <div id="navigator">
+            <ul>
+                <li><a href="">교육과정</a></li>
+                <li><a href="">교육원소개</a></li>
+                <li><a href="">취업지원센터</a></li>
+                <li><a href="">산학연계</a></li>
+                <li><a href="">상담센터</a></li>
+            </ul>
+        </div>
+
+        <div id="main">
+            <div id="content">
+                <div class="content" id="content_1"><img src="실습문제 이미지/banner.PNG" alt="배너"></div>
+                <div class="content" id="content_2">
+                    <div id="notice">안녕하세요 여기는 공지사항 제목이 들어오는 자리입니다.</div>
+                    <div id="news">
+                        <div>경제</div>
+                        <div>연예</div>
+                        <div>사회</div>
+                    </div>
+                </div>
+                <div class="content" id="content_3">
+                    <img src="실습문제 이미지/car.PNG" alt="차">
+                </div>
+            </div>
+
+            <div id="aside">
+                <!--로그인폼 전체를 감싸는 div-->
+                <div id="login-form">
+                    <!--입력을 받아 요청을 할 수 있는 form태그-->
+                    <form action="" id="login-form-input">
+                        <!--id, pwd들어갈 div-->
+                        <div id="login-input-id-pwd">
+                            <input type="text" placeholder="아이디를 입력해주세요.">
+                            <input type="password" placeholder="비밀번호를 입력해주세요.">
+                        </div>
+                        <!--로그인버튼이 들어갈 div-->
+                        <div id="login-input-btn">
+                            <input type="submit" value="로그인">
+                        </div>
+                    </form>
+                    <!--회원가입, id/pwd찾기가 들어갈 div-->
+                    <div id="login-form-etc">
+                        <a href="">회원가입</a>
+                        <a href="">ID/PWD 찾기</a>
+                    </div>
+                </div>
+                <div class="aside" id="aside_2">
+                    <img src="실습문제 이미지/shopping.PNG" alt="쇼핑">
+                </div>
+    
+                <div class="aside" id="footer">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
