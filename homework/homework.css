@@ -3,6 +3,17 @@
     padding: 0;
     margin:0;
 }
+html, body{
+    height: 100%;
+    min-width: 1248px;
+    overflow-x: auto;
+}
+
+.container{
+    white-space:nowrap;
+    overflow-x: auto;
+    width: 100%;
+}
 input[type="radio"] {
     position: absolute;
     opacity: 0;
@@ -26,6 +37,7 @@ a{
     color: #000;
     text-decoration: none;
 }
+
 ul, ol, li{
     list-style: none;
 }
@@ -40,7 +52,7 @@ input[type="button"]{
 }
 
 .margin{
-    max-width: 1300px;
+    max-width: 1248px;
     margin:0 auto;
 }
 
@@ -48,12 +60,12 @@ input[type="button"]{
 #nav{
     position: fixed;
     width: 100%;
-    height: auto;
+    border-bottom:1px solid #eeeeee;
 }
 /* over---------------------------------------------------------------- */
 #over{
     align-items: center;
-    height: 30px;
+    height: 36px;
     background-color: #edf1f5;
     color: rgb(95, 95, 95);
 }
@@ -90,8 +102,8 @@ input[type="button"]{
     padding: 0 20px;
 }
 
-#top .margin .right div:first-child{
-    font-size: 13px;
+#top .margin .right div:first-child p{
+    font-size: 15px;
     font-weight: bold;
 }
 
@@ -115,13 +127,15 @@ input[type="button"]{
     border-left : 1px solid #5dc488;
     border-right : 1px solid #5dc488;
     height: 100%;
-    width: 200px;
+    width: 250px;
     padding: 0;
 }
 
 #top .margin .left input[type="radio"]:checked + label{
     height: 100%;
     width: 100%;
+    font-weight: 700;
+    color : #333333;
     background: white;
     text-align: center;
 }
@@ -130,7 +144,7 @@ input[type="button"]{
     display: flex;
     gap : 10px;
     justify-content : flex-end;
-    height: 30px;
+    height: 40px;
     align-items: center;
 }
 
@@ -139,3 +153,68 @@ input[type="button"]{
     color: #2c2c2c;
 }
 
+/* menu---------------------------------------------------------------- */
+#menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+
+#menu > div:first-child {
+    width: 150px;
+}
+
+#menu > div:last-child {
+    width: 150px;
+    text-align: center;
+}
+#menu > div:last-child a{
+    font-size: 20px;
+    font-weight: 600;
+    color: #333333;
+}
+
+#menu ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 77px;
+    flex: 1;
+}
+
+#menu ul li {
+    display: flex;
+    height: 100%;
+    position: relative;
+}
+
+#menu ul a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333333;
+}
+
+.bottom{
+    position:absolute;
+    top: 75px;
+}
+
+#menu ul .bottom li {
+    height: 40px;
+}
+
+#menu ul .bottom li a {
+    padding: 2px 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333333;
+}
+/* swap---------------------------------------------------------------- */
