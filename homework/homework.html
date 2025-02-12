@@ -12,15 +12,15 @@
     <div class="container">
         <div id=nav>
             <div id="over">
-                <div class="margin">
+                <div class="swap">
                     <img src="https://work24.go.kr/cm/static/images/main_241120/header_flag2.png" alt="태극기">
                     <p>이 누리집은 대한민국 공식 전자정부 누리집입니다.</p>
                 </div>
             </div>
             <div id="top">
-                <div class="margin">
+                <div class="swap">
                     <div class="left">
-                        <input type="radio" id="radio1" name="menu">
+                        <input type="radio" id="radio1" name="menu" checked>
                         <label for="radio1">개인</label>
                         <input type="radio" id="radio2" name="menu">
                         <label for="radio2">기업</label>
@@ -31,7 +31,7 @@
                     </div>
                 </div>
             </div>
-            <div id="member-menu" class="margin">
+            <div id="member-menu" class="swap">
                 <ul>
                     <li>로그인</li>
                     <li>회원가입</li>
@@ -40,70 +40,65 @@
                     <li>원격지원</li>
                 </ul>
             </div>
-            <div id="menu" class="margin">
+            <div id="menu" class="swap">
                 <div><img src="./images/고용24.png" alt="고용24"></div>
                 <ul id="menu_ul">
-                    <li><a href="">채용정보</a>
+                    <li class="list"><a href="" class="underGreen">채용정보</a>
                         <ul class="bottom">
-                            <li><a href="">일자리 찾기</a></li>
-                            <li><a href="">구직신청</a></li>
-                            <li><a href="">채용행사</a></li>
-                            <li><a href="">강소기업</a></li>
+                            <li><a href=""><p class="underGreen">일자리 찾기</p></a></li>
+                            <li><a href=""><p class="underGreen">구직신청</p></a></li>
+                            <li><a href=""><p class="underGreen">채용행사</p></a></li>
+                            <li><a href=""><p class="underGreen">강소기업</p></a></li>
                         </ul>
                     </li>
-                    <li><a href="">취업지원</a>
+                    <li><a href="" class="underGreen">취업지원</a>
                         <ul class="bottom">
-                            <li><a href="">취업역량강화</a></li>
-                            <li><a href="">취업가이드</a></li>
-                            <li><a href="">국민취업지원제도</a></li>
-                            <li><a href="">미래내일 일경험</a></li>
-                            <li><a href="">취업지원금</a></li>
+                            <li><a href=""><p class="underGreen">취업역량강화</p></a></li>
+                            <li><a href=""><p class="underGreen">취업가이드</p></a></li>
+                            <li><a href=""><p class="underGreen">국민취업지원제도</p></a></li>
+                            <li><a href=""><p class="underGreen">미래내일 일경험</p></a></li>
+                            <li><a href=""><p class="underGreen">취업지원금</p></a></li>
                         </ul>
                     </li>
-                    <li><a href="">실업급여</a>
+                    <li><a href="" class="underGreen">실업급여</a>
                         <ul class="bottom">
-                            <li><a href="">수급자격</a></li>
-                            <li><a href="">실업인정</a></li>
-                            <li><a href="">취업촉진수당</a></li>
-                            <li><a href="">이직확인서</a></li>
+                            <li><a href=""><p class="underGreen">수급자격</p></a></li>
+                            <li><a href=""><p class="underGreen">실업인정</p></a></li>
+                            <li><a href=""><p class="underGreen">취업촉진수당</p></a></li>
+                            <li><a href=""><p class="underGreen">이직확인서</p></a></li>
                         </ul>
                     </li>
-                    <li><a href="">직업 능력 개발</a>
+                    <li><a href="" class="underGreen">직업 능력 개발</a>
                         <ul class="bottom">
-                            <li><a href="">훈련 찾기·신청</a></li>
-                            <li><a href="">국민내일배움카드</a></li>
-                            <li><a href="">훈련 기관·강사</a></li>
+                            <li><a href=""><p class="underGreen">훈련 찾기·신청</p></a></li>
+                            <li><a href=""><p class="underGreen">국민내일배움카드</p></a></li>
+                            <li><a href=""><p class="underGreen">훈련 기관·강사</p></a></li>
                         </ul>
                     </li>
-                    <li><a href="">출산휴가·육아휴직</a>
+                    <li><a href="" class="underGreen">출산휴가·육아휴직</a>
                         <ul class="bottom">
-                            <li><a href="">출산휴가</a></li>
-                            <li><a href="">육아휴직</a></li>
+                            <li><a href=""><p class="underGreen">출산휴가</p></a></li>
+                            <li><a href=""><p class="underGreen">육아휴직</p></a></li>
                         </ul>
                     </li>
                 </ul>
                 <div><a href="">전체메뉴</a></div>
             </div>
         </div>
+        <div id="inbody">
+            <div class="wrap">
+                <div id="search">
+                    <div id="way">
+                        <p>아무거나 입력해보기</p>
+                        <input type="radio" name="search" id="total" value="1">
+                        <label for="total">통합검색</label>
+                    </div>
+                    <div id="input"></div>
+                    <div></div>
+                </div>
+                <div id="loginBenefit"></div>
+            </div>
+        </div>
     </div>
-    <div class="swap">
-    </div>
-    </div>
-    <script>
-        const menu_ul = document.getElementById('menu_ul');
-        const bottom = document.getElementsByClassName('bottom');
-        menu_ul.addEventListener('mouseenter', function(){
-            menu_ul.classList.add('extend');
-            for (let i = 0; i < bottom.length; i++) {
-                bottom[i].style.display = 'block';
-            }
-        });
-        menu_ul.addEventListener('mouseleave', function(){
-            menu_ul.classList.remove('extend');
-            for (let i = 0; i < bottom.length; i++) {
-                bottom[i].style.display = 'none';
-            }
-        });
-    </script>
 </body>
 </html>

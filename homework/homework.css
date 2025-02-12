@@ -1,5 +1,6 @@
 *{
     font: 16px 'Pretendard', sans-serif;
+    box-sizing: border-box;
     padding: 0;
     margin:0;
 }
@@ -51,11 +52,43 @@ input[type="button"]{
     border : 1px solid black;
 }
 
-.margin{
+.swap{
     max-width: 1248px;
     margin:0 auto;
 }
 
+#inbody{
+    margin-top:193px;
+}
+/* anime----------------------------------------------------------------- */
+.underGreen{
+    position: relative;
+    display: inline-block;
+    color: #333333;
+    font-size: 14px;
+    font-weight: 500;
+    height: 70%;
+    align-items: center;
+}
+
+.underGreen::after{
+    content:'';
+    position:absolute;
+    bottom:0;
+    left:0;
+    width: 0;
+    height: 4px;
+    background: #117935;
+    transition : width 0.3s ease-in-out;
+}
+
+.underGreen:hover{
+    color: #117935;
+}
+
+.underGreen:hover::after{
+    width: 100%;
+}
 /* nav---------------------------------------------------------------- */
 #nav{
     position: fixed;
@@ -70,18 +103,18 @@ input[type="button"]{
     color: rgb(95, 95, 95);
 }
 
-#over .margin{
+#over .swap{
     display: flex;
     justify-content: flex-start;
     align-items: center;
     height: 100%;
 }
 
-#over .margin img{
+#over .swap img{
     padding: 0 10px;
 }
 
-#over .margin p{
+#over .swap p{
     font-size: 12px;
 }
 /* top---------------------------------------------------------------- */
@@ -90,24 +123,24 @@ input[type="button"]{
     height: 40px;
 }
 
-#top .margin{
+#top .swap{
     display: flex;
     justify-content: space-between;
     height: 100%;
 }
 
-#top .margin *{
+#top .swap *{
     display: flex;
     align-items: center;
     padding: 0 20px;
 }
 
-#top .margin .right div:first-child p{
+#top .swap .right div:first-child p{
     font-size: 15px;
     font-weight: bold;
 }
 
-#top .margin .right div:last-child{
+#top .swap .right div:last-child{
     background-color: #ffffff;
     border-radius: 50px 50px 50px 50px;
     padding: 0;
@@ -116,13 +149,13 @@ input[type="button"]{
     margin : 0;
 }
 
-#top .margin .right div:last-child a{
+#top .swap .right div:last-child a{
     font-size: 14px;
     margin:0;
     padding:10px;
 }
 
-#top .margin .left {
+#top .swap .left {
     display: flex;
     border-left : 1px solid #5dc488;
     border-right : 1px solid #5dc488;
@@ -131,7 +164,7 @@ input[type="button"]{
     padding: 0;
 }
 
-#top .margin .left input[type="radio"]:checked + label{
+#top .swap .left input[type="radio"]:checked + label{
     height: 100%;
     width: 100%;
     font-weight: 700;
@@ -155,10 +188,9 @@ input[type="button"]{
 
 /* menu---------------------------------------------------------------- */
 #menu {
-    position: relative;
     display: flex;
     align-items: center;
-    width: 100%;
+    min-width: 1248px;
     gap: 20px;
 }
 
@@ -176,6 +208,32 @@ input[type="button"]{
     color: #333333;
 }
 
+
+#menu_ul:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    height: 248px;
+    top: 100%;
+    background: white;
+    z-index: -1;
+    border-bottom: 1px solid #eeeeee;
+    border-top: 1px solid #eeeeee;
+    pointer-events: none;
+}
+
+#menu_ul:hover::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    top: calc(100% + 248px);
+    background: rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+}
+
 #menu ul {
     display: flex;
     justify-content: space-between;
@@ -185,10 +243,9 @@ input[type="button"]{
 }
 
 #menu ul li {
-    display: flex;
     height: 100%;
-    position: relative;
 }
+
 
 #menu ul a {
     display: flex;
@@ -199,12 +256,11 @@ input[type="button"]{
     padding: 0;
     font-size: 20px;
     font-weight: 600;
-    color: #333333;
+    position: relative;
 }
 
-.bottom{
-    position:absolute;
-    top: 75px;
+#menu ul .bottom {
+    position: absolute;
 }
 
 #menu ul .bottom li {
@@ -213,8 +269,23 @@ input[type="button"]{
 
 #menu ul .bottom li a {
     padding: 2px 0;
-    font-size: 14px;
-    font-weight: 500;
-    color: #333333;
+    display: flex;
+    justify-content: flex-start;
 }
-/* swap---------------------------------------------------------------- */
+
+#menu_ul > li {
+    position: relative;
+}
+
+#menu_ul > li .bottom {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: 1;
+}
+
+#menu_ul:hover .bottom {
+    display: block;
+}
+/* inbody---------------------------------------------------------------- */
