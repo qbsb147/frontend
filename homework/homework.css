@@ -4,6 +4,10 @@
     padding: 0;
     margin:0;
 }
+.blind{
+    display: block;
+}
+
 html, body{
     height: 100%;
     min-width: 1248px;
@@ -15,6 +19,7 @@ html, body{
     overflow-x: auto;
     width: 100%;
 }
+
 input[type="radio"] {
     position: absolute;
     opacity: 0;
@@ -57,9 +62,11 @@ input[type="button"]{
     margin:0 auto;
 }
 
-#inbody{
-    margin-top:193px;
+.swapb{
+    max-width: 1248px;
+    margin: 193px auto 0;
 }
+
 /* anime----------------------------------------------------------------- */
 .underGreen{
     position: relative;
@@ -94,6 +101,7 @@ input[type="button"]{
     position: fixed;
     width: 100%;
     border-bottom:1px solid #eeeeee;
+    z-index: 10;
 }
 /* over---------------------------------------------------------------- */
 #over{
@@ -173,6 +181,10 @@ input[type="button"]{
     text-align: center;
 }
 /* member-menu---------------------------------------------------------------- */
+#member-menu{
+    background: white;
+}
+
 #member-menu ul{
     display: flex;
     gap : 10px;
@@ -187,22 +199,27 @@ input[type="button"]{
 }
 
 /* menu---------------------------------------------------------------- */
-#menu {
+#menu{
+    background: white;
+}
+
+#menu .swap{
     display: flex;
+    background: white;
     align-items: center;
     min-width: 1248px;
     gap: 20px;
 }
 
-#menu > div:first-child {
+#menu .swap > div:first-child {
     width: 150px;
 }
 
-#menu > div:last-child {
+#menu .swap > div:last-child {
     width: 150px;
     text-align: center;
 }
-#menu > div:last-child a{
+#menu .swap > div:last-child a{
     font-size: 20px;
     font-weight: 600;
     color: #333333;
@@ -217,7 +234,6 @@ input[type="button"]{
     height: 248px;
     top: 100%;
     background: white;
-    z-index: -1;
     border-bottom: 1px solid #eeeeee;
     border-top: 1px solid #eeeeee;
     pointer-events: none;
@@ -234,7 +250,7 @@ input[type="button"]{
     pointer-events: none;
 }
 
-#menu ul {
+#menu .swap ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -242,12 +258,12 @@ input[type="button"]{
     flex: 1;
 }
 
-#menu ul li {
+#menu .swap ul li {
     height: 100%;
 }
 
 
-#menu ul a {
+#menu .swap ul a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -259,15 +275,15 @@ input[type="button"]{
     position: relative;
 }
 
-#menu ul .bottom {
+#menu .swap ul .bottom {
     position: absolute;
 }
 
-#menu ul .bottom li {
+#menu .swap ul .bottom li {
     height: 40px;
 }
 
-#menu ul .bottom li a {
+#menu .swap ul .bottom li a {
     padding: 2px 0;
     display: flex;
     justify-content: flex-start;
@@ -288,4 +304,111 @@ input[type="button"]{
 #menu_ul:hover .bottom {
     display: block;
 }
+
 /* inbody---------------------------------------------------------------- */
+#inbody {
+    margin-top: 243px;
+}
+
+#inbody-1 {
+    position: relative;
+}
+#inbody-1 .image{
+    position: absolute;
+    display: block;
+    left:-100px;
+    top: 22px;
+    width: 186px;
+    height: 79px;
+    background: url(https://www.work24.go.kr/cm/static/images/main_new/bg_visual.png) no-repeat;
+}
+#inbody-1 .swapb{
+    display: flex;
+}
+/*search------------------------------------------------  */
+#search{
+    height: 248px;
+    width: 682px;
+    padding: 47px 0px 0px;
+}
+
+#search .way{
+    display: flex;
+    align-items: center;
+}
+
+#search .way input[type='radio']+label{
+    width: auto;
+    margin-left: 15px;
+}
+
+#search .way input[type='radio']+label::before{
+    display:inline-block;
+    content:"";
+    width:30px;
+    height:30px;
+    background: url(https://www.work24.go.kr/cm/static/images/radio_unify_search_default.png) no-repeat;
+    background-size: 30px;
+    vertical-align: top;
+    margin:-4px 5px 0 0;
+}
+
+#search .way span{
+    color : #757575;
+    font-size:20px;
+    font-weight: 600;
+}
+
+.underBlue::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background: #4b64e1;
+    transition: width 0.3s ease-in-out;
+}
+
+.underBlue:hover {
+    color: #4b64e1;
+}
+
+.underBlue:hover::after {
+    width: 100%;
+}
+/* input------------------------------------------------------------ */
+#search .input{
+    display: flex;
+    justify-content: center;
+    width: 682px;
+    height: 62px;
+}
+
+#querySelect{
+    width:135;
+    height: 54;
+    padding: 0, 16px, 0, 0;
+}
+#querySelect span{
+    width:33.94;
+    height: 27;
+    color: #333333;
+}
+
+#search .input input[type="text"]{
+    width: 455px;
+    height: 45px;
+    margin : 0, 0, 0, 98px;
+}
+
+#search .input>a{
+    background: url(https://www.work24.go.kr/cm/static/images/main_new/ico24_search.svg) no-repeat;
+    margin : -18px, 0px, 0px;
+    width: 32;
+    height: 32;
+}
+/* loginBenefit---------------------------------------------------- */
+#loginBenefit{
+
+}
