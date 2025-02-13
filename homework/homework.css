@@ -18,6 +18,7 @@ html, body{
     white-space:nowrap;
     overflow-x: auto;
     width: 100%;
+    min-height: 100vh;
 }
 
 input[type="radio"] {
@@ -67,35 +68,11 @@ input[type="button"]{
     margin: 193px auto 0;
 }
 
-/* anime----------------------------------------------------------------- */
-.underGreen{
-    position: relative;
-    display: inline-block;
-    color: #333333;
-    font-size: 14px;
-    font-weight: 500;
-    height: 70%;
-    align-items: center;
+
+span {
+    letter-spacing: -2px;
 }
 
-.underGreen::after{
-    content:'';
-    position:absolute;
-    bottom:0;
-    left:0;
-    width: 0;
-    height: 4px;
-    background: #117935;
-    transition : width 0.3s ease-in-out;
-}
-
-.underGreen:hover{
-    color: #117935;
-}
-
-.underGreen:hover::after{
-    width: 100%;
-}
 /* nav---------------------------------------------------------------- */
 #nav{
     position: fixed;
@@ -305,19 +282,46 @@ input[type="button"]{
     display: block;
 }
 
+/* anime----------------------------------------------------------------- */
+.underGreen{
+    position: relative;
+    display: inline-block;
+    color: #333333;
+    font-size: 14px;
+    font-weight: 500;
+    height: 70%;
+    align-items: center;
+}
+
+.underGreen::after{
+    content:'';
+    position:absolute;
+    bottom:0;
+    left:0;
+    width: 0;
+    height: 4px;
+    background: #117935;
+    transition : width 0.3s ease-in-out;
+}
+
+.underGreen:hover{
+    color: #117935;
+}
+
+.underGreen:hover::after{
+    width: 100%;
+}
 /* inbody---------------------------------------------------------------- */
 #inbody {
     margin-top: 243px;
 }
 
-#inbody-1 {
-    position: relative;
-}
 #inbody-1 .image{
     position: absolute;
+    overflow: hidden;
     display: block;
-    left:-100px;
-    top: 22px;
+    left:-80px;
+    top: 265px;
     width: 186px;
     height: 79px;
     background: url(https://www.work24.go.kr/cm/static/images/main_new/bg_visual.png) no-repeat;
@@ -359,37 +363,158 @@ input[type="button"]{
     font-weight: 600;
 }
 
-.underBlue::after {
+/* search ani-------------------------------------------------- */
+
+#search .way input[type='radio']+label .underBlue{
+    position: relative;
+}
+
+#search .way input[type='radio']+label .underBlue::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: 2px;
     left: 0;
     width: 0;
     height: 4px;
-    background: #4b64e1;
+    background: #a6b2f0;
     transition: width 0.3s ease-in-out;
+    z-index: -1;
 }
 
-.underBlue:hover {
+#search .way input[type='radio']+label .underBlue:hover {
     color: #4b64e1;
 }
 
-.underBlue:hover::after {
+#search .way input[type='radio']+label .underBlue:hover::after {
     width: 100%;
 }
+
+#search .way input[type='radio']:checked + label .underBlue{
+    color: #4b64e1;
+}
+
+#search .way input[type='radio']:checked + label .underBlue::after{
+    width: 100%;
+}
+
+#search .way input[type='radio']:checked + label:nth-of-type(1)::before{
+    background: url(https://www.work24.go.kr/cm/static/images/radio_unify_search_fill_blue.png);
+}
+
+#search .way input[type='radio']+label .underLGreen{
+    position: relative;
+}
+
+#search .way input[type='radio']+label .underLGreen::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background: #b0eac8;
+    transition: width 0.3s ease-in-out;
+    z-index: -1;
+}
+
+#search .way input[type='radio']+label .underLGreen:hover {
+    color: #117935;
+}
+
+#search .way input[type='radio']+label .underLGreen:hover::after {
+    width: 100%;
+}
+
+#search .way input[type='radio']:checked + label .underLGreen{
+    color: #117935;
+}
+
+#search .way input[type='radio']:checked + label .underLGreen::after{
+    width: 100%;
+}
+
+#search .way input[type='radio']:checked + label:nth-of-type(2)::before{
+    background: url(https://www.work24.go.kr/cm/static/images/radio_unify_search_fill_green.png);
+}
+
+#search .way input[type='radio']+label .underOrange{
+    position: relative;
+}
+
+#search .way input[type='radio']+label .underOrange::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background: #ffbf7f;
+    transition: width 0.3s ease-in-out;
+    z-index: -1;
+}
+
+#search .way input[type='radio']+label .underOrange:hover {
+    color: #f0651f;
+}
+
+#search .way input[type='radio']+label .underOrange:hover::after {
+    width: 100%;
+}
+
+#search .way input[type='radio']:checked + label .underOrange{
+    color: #117935;
+}
+
+#search .way input[type='radio']:checked + label .underOrange::after{
+    width: 100%;
+}
+
+#search .way input[type='radio']:checked + label:nth-of-type(3)::before{
+    background: url(https://www.work24.go.kr/cm/static/images/radio_unify_search_fill_orange.png);
+}
+
 /* input------------------------------------------------------------ */
-#search .input{
-    display: flex;
-    justify-content: center;
+#search .input {
+    position: relative;
     width: 682px;
     height: 62px;
+    background: linear-gradient(to right, #5eca69, #7e9bfe) no-repeat;
+    border-radius: 50px 50px 50px 50px;
+}
+#search .input .input-in {
+    position: absolute;
+    display: flex;
+    top:5px;
+    left:5px;
+    width: 672px;
+    height: 52px;
+    justify-content: center;
+    background: white;
+    border-radius: 50px 50px 50px 50px;
 }
 
 #querySelect{
-    width:135;
-    height: 54;
+    width:135px;
+    height: 52px;
     padding: 0, 16px, 0, 0;
 }
+
+#querySelect button{
+    width:100%;
+    height: 100%;
+    cursor:pointer;
+    background: white;
+    border: white;
+    border-radius: 50px 0px 0px 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#querySelect button span{
+    font-size: 16px;
+}
+
 #querySelect span{
     width:33.94;
     height: 27;
