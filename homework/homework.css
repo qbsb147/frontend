@@ -272,10 +272,21 @@ span {
     width: 150px;
     text-align: center;
 }
+
 #menu .swap > div:last-child a{
+    display: flex;
+    align-items: center;
+}
+
+#menu .swap > div:last-child a span:first-child{
+    background: url(https://www.work24.go.kr/cm/static/images/main_new/ico32_category.svg) no-repeat center/contain;
+    width: 32px;
+    height: 32px;
+}
+
+#menu .swap > div:last-child a span{
     font-size: 20px;
     font-weight: 600;
-    color: #333333;
 }
 
 
@@ -390,6 +401,9 @@ span {
 /* inbody---------------------------------------------------------------- */
 #inbody {
     margin-top: 243px;
+}
+
+#inbody-1 .swap{
     position:relative;
 }
 
@@ -397,7 +411,7 @@ span {
     display: block;
     position: absolute;
     overflow: hidden;
-    left:-100px;
+    left:-232px;
     top: 22px;
     width: 186px;
     height: 79px;
